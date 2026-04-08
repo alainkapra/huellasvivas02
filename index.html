@@ -34,7 +34,7 @@
         }
         
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 700;
             line-height: 1.1;
         }
@@ -632,105 +632,133 @@
     </nav>
 </header>
 
-    <section class="hero">
-        <div class="hero-titulo">
+
+<section class="hero" 
+         style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:2rem; padding:2rem;">
+
+ 
+  <!-- Columna 1: Imagen más grande -->
+  <div class="hero-col hero-imagen" style="flex:2; min-width:300px; text-align:center;">
+    <img src="assets/imagenes/000.jpg" alt="Imagen portada" 
+         style="width:85%; height:auto; border:1px solid #fafbf9; transition:transform 0.5s;" 
+         onmouseover="this.style.transform='scale(1.05)'" 
+         onmouseout="this.style.transform='scale(1)'" />
+  </div>
+
+  <!-- Separador vertical -->
+  <div style="width:2px; background-color:#faf9f8; height:auto;"></div>
+
+  <!-- Columna 2: Texto más pequeño, alineado a la izquierda -->
+  <div class="hero-titulo">
             <h1>Documentos que <i>respiran</i>,<br>memoria que <i>habla</i></h1>
         </div>
-        <div class="hero-firma">
-            <p>Un archivo vivo no guarda silencio. Guarda verdad.</p>
-            <div class="firma-linea"></div>
-            <div style="font-family: 'Cormorant Garamond'; font-size: 1.2rem; font-weight: 600;">— Archivos Vivos, 2026</div>
-        </div>
-    </section>
-
-    <section class="imagen-destacada">
-  <div class="contenedor-imagen">
-    <img src="assets/imagenes/001.jpg" alt="Portada">
+    </p>
   </div>
-      <nav>
-        <ul>
-            <li><a href="MAPA_MEMORIA.html">MAPA DE LA MEMORIA</a></li>
-            <li><a href="ARCHIVO_DOCUMENTAL.html">ARCHIVO DOCUMENTAL</a></li>
-            <li><a href="RUTA_MEMORIA.html">RUTA DE LA MEMEMORIA</a></li>
-            <li><a href="QUIENES_SOMOS.html">QUIENES SOMOS</a></li>
-            <li><a href="PROYECTO.html">PROYECTO</a></li>            
-        </ul>
-    </nav>
-
 </section>
 
 
-    <section class="busqueda">
-        <input type="text" placeholder="buscar en la memoria...">
-        <button>BUSCAR</button>
-    </section>
 
-    <section class="documentos">
-        <div class="documentos-header">
-            <h2>Documentos recientes</h2>
-            <a href="#">ver todo el archivo</a>
-        </div>
+
+
+
+
+<!-- NUEVA SECCIÓN: buscador -->
+<section class="buscador" style="text-align:center; padding:1rem 0;">
+  <form action="ARCHIVO_DOCUMENTAL.html" method="get" style="display:inline-flex; gap:0.5rem;">
+    <input type="text" name="q" placeholder="Buscar en el archivo..." 
+           style="padding:0.5rem; border:1px solid #ccc; border-radius:4px; width:250px;">
+    <button type="submit" 
+            style="padding:0.5rem 1rem; background-color:#FFD700; border:none; border-radius:4px; font-weight:bold; cursor:pointer;">
+      Buscar
+    </button>
+  </form>
+</section>
+
+
+<section class="documentos-recientes" style="margin-bottom:1rem; padding-bottom:1rem;">
+  <!-- Encabezado con título a la izquierda y enlace a la derecha -->
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <h2 style="margin:0;">Documentos recientes</h2>
+    <a href="ARCHIVO_DOCUMENTAL.html" style="text-decoration:none; font-weight:bold; color:#FFD700;">
+      Ver todo el archivo
+    </a>
+  </div>
+
+  <!-- Línea blanca debajo -->
+  <div style="border-bottom:2px solid #ffffff; margin:0.5rem 0;"></div>
         
-        <div class="grid-documentos">
-            <article class="tarjeta-papel">
-                <div class="tipo-documento">Informe</div>
-                <h3>Masacre de Bojayá</h3>
-                <div class="metadata">
-                    <span>2002</span>
-                    <span>Chocó</span>
-                </div>
-                <p class="descripcion">79 personas murieron cuando un cilindro bomba impactó la iglesia donde se refugiaban. Este informe recoge los testimonios de los sobrevivientes.</p>
-                <a href="#" class="enlace-documento">leer documento</a>
-            </article>
-            
-            <article class="tarjeta-papel">
-                <div class="tipo-documento">Testimonio</div>
-                <h3>La tierra que nos quitaron</h3>
-                <div class="metadata">
-                    <span>2021</span>
-                    <span>Meta</span>
-                </div>
-                <p class="descripcion">Relato de una campesina desplazada que después de 20 años pudo regresar a su tierra. Un testimonio de resistencia y esperanza.</p>
-                <a href="#" class="enlace-documento">escuchar testimonio</a>
-            </article>
-            
-            <article class="tarjeta-papel">
-                <div class="tipo-documento">Fotografía</div>
-                <h3>Marcha del silencio</h3>
-                <div class="metadata">
-                    <span>2008</span>
-                    <span>Bogotá</span>
-                </div>
-                <p class="descripcion">Millones de personas marcharon contra la violencia. Esta fotografía captura el momento exacto en que el silencio se convirtió en voz.</p>
-                <a href="#" class="enlace-documento">ver fotografía</a>
-            </article>
+        <div class="grid-documentos" 
+     style="display:grid; grid-template-columns:repeat(3, 1fr); gap:2rem; max-width:1200px; margin:2rem auto;">
+    
+    <article class="tarjeta-papel">
+        <div class="tipo-documento">Informe</div>
+        <h3>Masacre de Bojayá</h3>
+        <div class="metadata">
+            <span>2002</span>
+            <span>Chocó</span>
         </div>
+        <p class="descripcion">79 personas murieron cuando un cilindro bomba impactó la iglesia donde se refugiaban. Este informe recoge los testimonios de los sobrevivientes.</p>
+        <a href="#" class="enlace-documento">leer documento</a>
+    </article>
+    
+    <article class="tarjeta-papel">
+        <div class="tipo-documento">Testimonio</div>
+        <h3>La tierra que nos quitaron</h3>
+        <div class="metadata">
+            <span>2021</span>
+            <span>Meta</span>
+        </div>
+        <p class="descripcion">Relato de una campesina desplazada que después de 20 años pudo regresar a su tierra. Un testimonio de resistencia y esperanza.</p>
+        <a href="#" class="enlace-documento">escuchar testimonio</a>
+    </article>
+    
+    <article class="tarjeta-papel">
+        <div class="tipo-documento">Fotografía</div>
+        <h3>Marcha del silencio</h3>
+        <div class="metadata">
+            <span>2008</span>
+            <span>Bogotá</span>
+        </div>
+        <p class="descripcion">Millones de personas marcharon contra la violencia. Esta fotografía captura el momento exacto en que el silencio se convirtió en voz.</p>
+        <a href="#" class="enlace-documento">ver fotografía</a>
+    </article>
+</div>
+
     </section>
 
-    <section class="memoria">
-        <div class="memoria-contenido">
-            <div class="memoria-texto">
-                <h2>Lo que guardamos</h2>
-                <p>No son números. Son vidas, historias, memorias que nos han confiado para que no se pierdan en el olvido.</p>
-            </div>
-            <div class="memoria-cifras">
-                <div class="cifra-item">
-                    <div class="cifra-numero">1.247</div>
-                    <div class="cifra-etiqueta">documentos</div>
-                </div>
-                <div class="cifra-item">
-                    <div class="cifra-numero">32</div>
-                    <div class="cifra-etiqueta">testimonios</div>
-                </div>
-                <div class="cifra-item">
-                    <div class="cifra-numero">15</div>
-                    <div class="cifra-etiqueta">organizaciones</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="timeline-simple">
+<section class="memoria" style="margin-top:0; margin-bottom:1rem; padding:1rem 0; text-align:center;">
+  <div class="memoria-contenido" style="max-width:800px; margin:0 auto;">
+    
+    <!-- Texto centrado -->
+    <div class="memoria-texto" style="margin-bottom:1rem;">
+      <h2 style="margin-bottom:0.5rem;">Lo que guardamos</h2>
+      <p style="margin:0;">
+        No son números. Son vidas, historias, memorias que nos han confiado para que no se pierdan en el olvido.
+      </p>
+    </div>
+    
+    <!-- Cifras centradas en fila -->
+    <div class="memoria-cifras" style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
+      <div class="cifra-item" style="text-align:center;">
+        <div class="cifra-numero" style="font-size:4rem; font-weight:bold;">1.247</div>
+        <div class="cifra-etiqueta">documentos</div>
+      </div>
+      <div class="cifra-item" style="text-align:center;">
+        <div class="cifra-numero" style="font-size:4rem; font-weight:bold;">32</div>
+        <div class="cifra-etiqueta">testimonios</div>
+      </div>
+      <div class="cifra-item" style="text-align:center;">
+        <div class="cifra-numero" style="font-size:4rem; font-weight:bold;">15</div>
+        <div class="cifra-etiqueta">organizaciones</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+   <section class="timeline-simple" style="margin-top:0; padding-top:1rem;">
         <div class="hitos">
             <div class="hito">
                 <div class="hito-ano">1948</div>
@@ -757,65 +785,98 @@
                 <div class="hito-desc">Comisión Verdad</div>
             </div>
         </div>
-    </section>
 
-        <section class="imagen-destacada">
-  <div class="contenedor-imagen">
-    <img src="assets/imagenes/002.jpg" alt="Portada">
+<section class="two-col-after-timeline" 
+style="display:flex; flex-wrap:wrap; gap:2rem; align-items:center; background-color:#ffe04a; padding:2rem;">
+
+  <!-- Columna 1: Imagen con efecto hover -->
+  <div class="col image-col" style="flex:1; max-width:200px; overflow:hidden;">
+    <img src="assets/imagenes/010.jpg" alt="Imagen 010" 
+         style="width:100%; height:auto; display:block; transition:transform 0.5s;" 
+         onmouseover="this.style.transform='scale(1.05)'" 
+         onmouseout="this.style.transform='scale(1)'" />
   </div>
 
+  <!-- Columna 2: Texto -->
+  <div class="col text-col" style="flex:2; color:#023047;">
+    <h2 style="font-family:'Cormorant Garamond', serif; font-size:3rem; ; color:#ae741e; margin-bottom:1rem;">
+      Memoria viva
+    </h2>
+    <p style="font-size:1rem; line-height:1.5; ; color:#052d40; font-weight:600;">
+     Los archivos de Derechos Humanos no son cifras ni papeles: son voces, huellas y memoria viva. 
+     En ellos se guardan las heridas del conflicto, pero también la resistencia y la esperanza. 
+     Cada documento es testigo de la verdad y un reclamo por dignidad, porque no existe una sola historia, sino muchas, entrelazadas por el dolor y la fuerza de quienes no olvidan.
+    </p>
+  </div>
+</section>
 
-    <footer>
-        <div class="footer-contenido">
-            <div class="footer-logo">
-                <h3>ARCHIVOS VIVOS</h3>
-                <p>Memoria, verdad y derechos humanos en Colombia</p>
-                <div class="footer-redes">
-                    <a href="#">📷</a>
-                    <a href="#">💼</a>
-                    <a href="#">▶️</a>
-                    <a href="#">🎵</a>
-                </div>
-            </div>
-            
-            <div class="footer-enlaces">
-                <h4>Explorar</h4>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Archivo documental</a></li>
-                    <li><a href="#">Mapa de la memoria</a></li>
-                    <li><a href="#">Rutas de la memoria</a></li>
-                    <li><a href="#">Línea de tiempo</a></li>
-                    <li><a href="#">Videos</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-enlaces">
-                <h4>Sobre el proyecto</h4>
-                <ul>
-                    <li><a href="#">Nuestra historia</a></li>
-                    <li><a href="#">Nuestro equipo</a></li>
-                    <li><a href="#">Cómo colaborar</a></li>
-                    <li><a href="#">Instituciones aliadas</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-enlaces">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Términos de uso</a></li>
-                    <li><a href="#">Glosario</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-copyright">
-            <p>© 2026 Huellas vivas - diseño y montaje ALCAZUL </p>
-            <p>Bogotá, Colombia · contacto@huellasvivas.org</p>
-        </div>
-    </footer>
+  </div>
+
+</section>
+
+<nav class="barra-navegacion" style="text-align:center; margin:1rem 0;">
+  <ul style="display:inline-flex; gap:1.5rem; list-style:none; padding:0; margin:0;">
+    <li><a href="MAPA_MEMORIA.html">MAPA DE LA MEMORIA</a></li>
+            <li><a href="ARCHIVO_DOCUMENTAL.html">ARCHIVO DOCUMENTAL</a></li>
+            <li><a href="RUTA_MEMORIA.html">RUTA DE LA MEMEMORIA</a></li>
+  </ul>
+</nav>
+
+
+</section>
+
+
+
+
+<footer style="background-color:#3c9a9e; color:#E8D9C5; margin-top:2rem; padding:2rem 1rem;">
+  <div class="footer-contenido" 
+       style="max-width:1400px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; text-align:center;">
+    
+    <!-- Bloque Explorar -->
+    <div class="footer-enlaces" style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:0.5rem; font-size:1rem; color:#FFD700;">EXPLORAR</h4>
+      <ul style="list-style:none; padding:0; margin:0; line-height:1.4;">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Archivo documental</a></li>
+        <li><a href="#">Mapa de la memoria</a></li>
+        <li><a href="#">Rutas de la memoria</a></li>
+        <li><a href="#">Línea de tiempo</a></li>
+        <li><a href="#">Videos</a></li>
+      </ul>
+    </div>
+    
+    <!-- Bloque Sobre el proyecto -->
+    <div class="footer-enlaces" style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:0.5rem; font-size:1rem; color:#FFD700;">SOBRE EL PORTAL</h4>
+      <ul style="list-style:none; padding:0; margin:0; line-height:1.4;">
+        <li><a href="#">Nuestra historia</a></li>
+        <li><a href="#">Nuestro equipo</a></li>
+        <li><a href="#">Cómo colaborar</a></li>
+        <li><a href="#">Instituciones aliadas</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    
+    <!-- Bloque Legal -->
+    <div class="footer-enlaces" style="flex:1; min-width:200px;">
+      <h4 style="margin-bottom:0.5rem; font-size:1rem; color:#FFD700;">LEGAL</h4>
+      <ul style="list-style:none; padding:0; margin:0; line-height:1.4;">
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos de uso</a></li>
+        <li><a href="#">Glosario</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="footer-copyright" 
+       style="max-width:1400px; margin:0 auto; text-align:center; padding-top:1rem; border-top:1px solid rgba(248,248,247,0.2); font-size:0.85rem;">
+    <p style="margin:0;">© 2026 Huellas vivas - diseño y montaje ALCAZUL</p>
+    <p style="margin:0;">Bogotá, Colombia · contacto@huellasvivas.org</p>
+  </div>
+</footer>
+
+
 </body>
 </html>
